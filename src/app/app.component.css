@@ -1,0 +1,62 @@
+.head1{
+   color: rgb(45, 153, 248);
+   text-align: center;
+}
+.head2{
+   color: rgb(45, 153, 248);
+   text-align: center;
+}
+span{
+   color: red;
+}
+.blueline{
+   background-color: rgb(10, 141, 255);
+   height: 5px;
+   width: auto;
+}
+.backgblue{
+   background-color: rgb(190, 226, 247);
+   
+}
+.m-l{
+   margin-left: 10px;
+   margin-right: 10px;
+  
+}
+.ms-10{
+   padding:  10px;
+}
+.btn{
+   background-color: green;
+   color: white;
+   border: 0;
+   margin-left: 3px;
+   padding: 5px;
+   border-radius: 3px;
+}
+.disp{
+   display: flex;
+}
+.width{
+   width: 400px;
+   padding: 30px;
+}
+.w1{
+   width: 250px;
+}
+.backg{
+   background-color: white;
+   padding: 5px;
+   border: 1px solid grey;
+
+}
+.w2{
+   width: 100px;
+   
+}
+.yes{
+   border: 3px solid  rgb(10, 141, 255); ;
+   border-radius: 10px;
+   word-wrap: break-word;
+   padding: 5px;
+}
