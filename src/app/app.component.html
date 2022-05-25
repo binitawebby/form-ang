@@ -3,92 +3,148 @@
 <h5 class="m-l">Feild marked with <span>*</span> are mandatory</h5>
 <div class="blueline m-l"></div>
 
-  
+
 
 <div class="backgblue m-l ms-10 disp">
 
   <div class="width">
     <div>
-
-      
       <h4>
         Employer Name<span>*</span><br>
-      </h4>  
-      <input type="text" placeholder="" class="w1"><br>
+      </h4>
+      <p>
+        <mat-form-field appearance="outline">
+          <input matInput type="email" [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+            placeholder="Demo ECCC">
+
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid Name
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Employer Name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </p>
+
       <h4>
-        
         Employer Identification number <br>(EN)<span>*</span><br>
       </h4>
-      <input type="text" placeholder="" class="w1"><br>
-      <h4>
+      <p>
+        <mat-form-field appearance="outline">
+          <input matInput type="text" [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+            placeholder="Demo ECCC">
 
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid Employer Identification number
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Employer Identification number is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+      </p>
+
+
+
+      <h4>
         Address 1:<br>
       </h4>
-        <input type="text" placeholder="" class="w1"><br>
-        <h4>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="">
+      </mat-form-field>
+      <h4>
 
-          Address 2:<br>
-        </h4>
-      <input type="text" placeholder="" class="w1"><br>
+        Address 2:<br>
+      </h4>
+      <mat-form-field appearance="outline">
+
+        <input matInput placeholder="">
+
+      </mat-form-field>
       <h4>
 
         City:<br>
       </h4>
-      <input type="text" placeholder="" class="w1"><br>
-      <h4>
+      <mat-form-field appearance="outline">
 
-        State:<br>
+        <input matInput placeholder="">
+
+      </mat-form-field>
+
+
+      <h4> State:<br>
       </h4>
-      <input type="text" placeholder="" class="w1"><br>
+      <mat-form-field appearance="outline">
+
+        <input matInput placeholder="">
+
+      </mat-form-field> <br>
       Country:<br>
-      <input type="text" placeholder="" class="w1"><br>
+      <mat-form-field appearance="outline">
+
+        <input matInput placeholder="">
+
+      </mat-form-field> <br>
       Zip Code:<br>
-      <input type="text" placeholder="" class="w1"><br>
-      
-      
+      <mat-form-field appearance="outline">
+
+        <input matInput placeholder="">
+
+      </mat-form-field><br>
+
+
       NAICS:<span>*</span> <br>
-      <input type="text"><br>
-      <p>Select a pay period date between <br>October 1st and December 31st to <br>apply as your Worforce Snapshot:</p><br>
+      <mat-form-field appearance="outline">
+
+        <input matInput placeholder="">
+
+      </mat-form-field>
+      <p>Select a pay period date between <br>October 1st and December 31st to <br>apply as your Worforce Snapshot:</p>
+      <br>
       <p>
-        <span matBadge="?" matBadgeOverlap="false" matBadgeColor="warn"
-        matBadgeSize="small"></span>
+        <mat-icon aria-hidden="false" aria-label="Example help icon">help</mat-icon>
       </p>
-      <input type="text"><span>*</span>
+      <mat-form-field appearance="outline">
+
+        <input matInput placeholder="">
+
+      </mat-form-field><span>*</span>
     </div>
   </div>
 
   <div class="width">
-    <h4><b>Not sure what report type to select?<button  class="btn">Click Here</button></b></h4>
+    <h4><b>Not sure what report type to select?<button mat-raised-button class="btn">Click Here</button></b></h4>
     <h5><b>Check the box that applies :
-    </b></h5>
-    <mat-checkbox class="example-margin">Single-establishment Employer Report<span matBadge="?" matBadgeOverlap="false" matBadgeColor="warn" matBadgePosition="after"
-      matBadgeSize="small"></span>
+      </b></h5>
+    <mat-checkbox class="example-margin">Single-establishment Employer Report<mat-icon aria-hidden="false" aria-label="Example help icon">help</mat-icon>
     </mat-checkbox>
     <h4><b>Multi-establishment Employer</b></h4>
     <mat-checkbox class="example-margin">Consolidation Report (Required)
-      <span matBadge="?" matBadgeOverlap="false" matBadgeColor="warn" matBadgePosition="after"
-      matBadgeSize="small"></span>
+      <mat-icon aria-hidden="false" aria-label="Example help icon">help</mat-icon>
     </mat-checkbox>
-    <mat-checkbox class="example-margin">Headquarters Unit Report (Required)<span matBadge="?" matBadgeOverlap="false" matBadgeColor="warn" matBadgePosition="after"
-      matBadgeSize="small"></span>
+    <mat-checkbox class="example-margin">Headquarters Unit Report (Required)<mat-icon aria-hidden="false" aria-label="Example help icon">help</mat-icon>
     </mat-checkbox>
     <mat-checkbox class="example-margin">Individual Establishment Report
-      <span matBadge="?" matBadgeOverlap="false" matBadgeColor="warn" matBadgePosition="after"
-      matBadgeSize="small"></span>
+      <mat-icon aria-hidden="false" aria-label="Example help icon">help</mat-icon>
     </mat-checkbox>
     <h4><b>EEOC Company Number and Unit Number are optional.
-    </b></h4>
+      </b></h4>
     <h4>Enter the EEOC assigned company number:
     </h4>
-    <input type="text" placeholder="" class="w1"><br>
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="">
+    </mat-form-field><br>
     <h4>Enter the EEOC assigned unit number:
     </h4>
-    <input type="text" placeholder="" class="w1"><br>
+    <mat-form-field appearance="outline">
+
+      <input matInput placeholder="">
+
+    </mat-form-field><br>
     <p>Was an EEO-1 report filed for this establishment last year?</p>
     <mat-checkbox class="example-margin">Yes</mat-checkbox>
     <mat-checkbox class="example-margin">No</mat-checkbox>
 
-<div class="disp backg">
+    <!-- <div class="disp backg">
   <p>Are there additional establishments to report for?</p>
   <mat-form-field appearance="fill" class="w2">
     <mat-select >
@@ -97,44 +153,66 @@
       
     </mat-select>
   </mat-form-field>
-</div>
+</div> -->
 
+    <h4>Are there additional establishments to report for?</h4>
+    <mat-form-field appearance="fill">
+      <mat-select>
+        <mat-option value="yes" >yes</mat-option>
+        <mat-option value="no">no</mat-option>
+      </mat-select>
+    </mat-form-field> <br>
+  <!-- <div *ngIf="mat-option.value=yes">
+  </div> -->
+  <!-- <ng-template #yess>
+    <button>Add Establishment</button>
+  </ng-template> -->
+  <button mat-raised-button class="btn1" (click)="openDialog()">Add Establishment</button>
+
+  
 
 
   </div>
-
-<div class="width">
-  <h5><b>Check the box that applies :
-  </b></h5>
-  <p>1. Does the entire company have at least 100 employees in the payroll period for which you are reporting?</p>
-  <mat-checkbox class="example-margin">Yes</mat-checkbox>
-  <mat-checkbox class="example-margin">No</mat-checkbox>
-  <p>2. Is your company affiliated through common ownership and/or centralized management with other entities in an enterprise with a total employment of 100 or more?</p>
-  <mat-checkbox class="example-margin">Yes</mat-checkbox>
-  <mat-checkbox class="example-margin">No</mat-checkbox>
-  <p>3. Does the company or any of its establishments (a) have 50 or more employees AND (b) is not exempt as provided by 41 CFR 60-1.5, AND either (1) is a prime government contractor or first-tier subcontactor, and has a contract, subcontract, or purchase order amounting to $50,000 or more, or (2) serves as a depository of Government funds in any amount or is a financial institution which is an issuing and paying agent for U.S. Savings Bonds and Savings Notes?</p>
-  <mat-checkbox class="example-margin">Yes</mat-checkbox>
-  <mat-checkbox class="example-margin">No</mat-checkbox>
   
-<div class="yes">
-  <mat-checkbox>I verify that all Gender and Ethnicity data I import into  
-  </mat-checkbox>
-  the solution has been self-identified or captured within the regulations provided by the Equal Employment Opportunity Commission.
-</div>
-<button  class="btn">Save</button>
-<button mat-raised-button color="primary">Save</button>
+ 
 
+  <div class="width">
+    <h5><b>Check the box that applies :
+      </b></h5>
+    <p>1. Does the entire company have at least 100 employees in the payroll period for which you are reporting?</p>
+    <mat-checkbox class="example-margin">Yes</mat-checkbox>
+    <mat-checkbox class="example-margin">No</mat-checkbox>
+    <p>2. Is your company affiliated through common ownership and/or centralized management with other entities in an
+      enterprise with a total employment of 100 or more?</p>
+    <mat-checkbox class="example-margin">Yes</mat-checkbox>
+    <mat-checkbox class="example-margin">No</mat-checkbox>
+    <p>3. Does the company or any of its establishments (a) have 50 or more employees AND (b) is not exempt as provided
+      by 41 CFR 60-1.5, AND either (1) is a prime government contractor or first-tier subcontactor, and has a contract,
+      subcontract, or purchase order amounting to $50,000 or more, or (2) serves as a depository of Government funds in
+      any amount or is a financial institution which is an issuing and paying agent for U.S. Savings Bonds and Savings
+      Notes?</p>
+    <mat-checkbox class="example-margin">Yes</mat-checkbox>
+    <mat-checkbox class="example-margin">No</mat-checkbox>
 
+    <div class="yes">
+      <mat-checkbox>I verify that all Gender and Ethnicity data I import into
+      </mat-checkbox>
+      the solution has been self-identified or captured within the regulations provided by the Equal Employment
+      Opportunity Commission.
+    </div>
+    <button mat-raised-button class="btn1">Save</button>
+<!-- <button mat-raised-button (click)="onAdd()">Add to cart</button> -->
 
-
-<app-practice></app-practice>
-
-</div>
-
-
-
-
-
+  </div>
 
 </div>
 <div class="blueline m-l"></div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<app-prac></app-prac>

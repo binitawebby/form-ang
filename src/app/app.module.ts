@@ -10,15 +10,22 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatInputModule} from '@angular/material/input';
+import {ReactiveFormsModule} from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
 
-import { ReactiveFormsModule } from '@angular/forms';
 import { PracticeComponent } from './practice/practice.component';
+import { DialogEgComponent } from './dialog-eg/dialog-eg.component';
+import {MatIconModule} from '@angular/material/icon';
+import { PracComponent } from './prac/prac.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PracticeComponent
+    PracticeComponent,
+    DialogEgComponent,
+    PracComponent
   ],
+  entryComponents:[DialogEgComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,7 +36,8 @@ import { PracticeComponent } from './practice/practice.component';
     MatSelectModule,
     MatBadgeModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,MatIconModule
     
      
   ],
